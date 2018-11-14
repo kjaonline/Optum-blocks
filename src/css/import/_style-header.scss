@@ -1,0 +1,26 @@
+//Uncomment if header is on top of splash
+/* body{
+    position: relative;
+} */
+
+.site-header{
+    padding: 10px;
+    border-bottom: 1px solid $borderColor;
+
+    //Uncomment if header needs to be on top of splash
+    //@include floatingHeader
+}
+
+.main-navigation{
+    ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+    }
+
+    a{
+        display: block;
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,38 @@
+/*
+    Scaling Viewport Font Size hack:
+        font-size: calc(1vw + 1vh + .5vmin);
+
+    For those times when the font size should scale with the viewport!
+*/
+
+
+@media screen and (max-width: 1040px){
+    
+}
+
+@media screen and (max-width: 767px){
+    
+}
+
+@media screen and (max-width: 640px){
+    .desktop{
+        display: none!important;
+    }
+
+    .mobile{
+        display: block!important;
+    }
+
+    /* Mobile Navigation Items have been moved to "prefab/style-mobile-nav" */ 
+}
+
+@media screen and (max-width: 600px){
+    //Reset for Mobile Admin bar
+    body{
+        position: initial;
+    }
+}
+
+@media screen and (max-width: 400px){
+    
+}
