@@ -24,14 +24,8 @@
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<img src="<?php the_asset_dir() ?>/logo.png" alt="" srcset="">
 
-            <?php 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; ?></p>
-			<?php
-			endif; ?>
 		</div><!-- .site-branding -->
 
 		<div class="mobile-nav-button">
@@ -41,12 +35,20 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<?php
+			<?php /*
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				) );
+				) ); */
 			?>
+
+			<ul>
+				<li><a href="">Services</a></li>
+				<li><a href="">Products</a></li>
+				<li><a href="">Clients</a></li>
+				<li><a href="">Bukidnon Development</a></li>
+				<li><a href="">About Us</a></li>
+			</ul>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
