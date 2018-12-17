@@ -13,6 +13,17 @@ get_header(); ?>
 		require 'index-parts/splash.php';
 
 		?>
+		<div class="home-contact">
+			<div class="intro">
+				<h3>Contact Us Today</h3>
+			</div>
+			<div class="info">
+				<a href="tel:0919-123-1234"><i class="fas fa-phone"></i> 0919-123-1234</a>
+			</div>
+			<div class="info"> 
+				<a href="https://m.me/optumenterprises"><i class="fab fa-facebook-messenger"></i>  Optumenterprises</a>
+			</div>
+		</div>
 		<div class="home-grid">
 			<div class="services">
 				Services

@@ -54,7 +54,7 @@ function bplate_scripts() {
 	wp_enqueue_style( 'bplate-style', get_template_directory_uri().'/public/css/style.min.css' );
 
 	//Enqueue Fonts
-	wp_enqueue_style( 'bplate-font', "https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" );
+	wp_enqueue_style( 'bplate-font', "https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i,800|Roboto+Slab:100,300,400,700" );
 
 	//DEPRECATED: Enqueue Font Awesome
 	// - Font Awesome 5 JS Enqueued Below
@@ -164,4 +164,36 @@ wp_deregister_script('email_ajax_js');
 
 //Add premade functions for various items such as social icons
 require_once('prefab/main.php');
+
+//Custom Post Type registration
+
+function create_posttype() {
+ 
+    register_post_type( 'Bukidnon News',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Bukidnon News' ),
+                'singular_name' => __( 'Bukidnon News' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'news'),
+        )
+	);
+	register_post_type( 'Client Testimonial',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Testimonial' ),
+                'singular_name' => __( 'Testimonials' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'testimonial'),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
 ?>

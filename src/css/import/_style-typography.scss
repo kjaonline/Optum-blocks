@@ -1,5 +1,7 @@
+$openSans: 'Open Sans', sans-serif;
+
 html{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
     color: $fontColor;
 }
 
@@ -36,6 +38,7 @@ h6{
 }
 
 p{
+	font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     margin: 0 0 10px;
     line-height: 1.5;

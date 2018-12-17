@@ -16,6 +16,7 @@
 	align-items: center;
 	background: url($assetDir + 'generic.JPG') center center no-repeat;
 	background-size: cover;
+	
 	.left {
 		width: 50%;
 		text-align: center;
@@ -50,41 +51,87 @@
 		text-align: center;
 	}
 }
+
+.home-contact {
+	background: #43a11e;
+	padding: 50px 10px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	.intro {
+		width: 100%;
+	}
+	.info {
+		margin: 0 30px;
+		cursor: pointer;
+	}
+	a {
+		font-family: $openSans;
+		color: #fff;
+		font-weight: bold;
+		font-size: 1.5em;
+	}
+}
 .splash{
     //Uncomment if splash needs text on it.
 	@include floatingSplash;
-	img {
-		filter: blur(2px) brightness(50%);
 
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+
 	
+	box-shadow: inset 9999px 9999px rgba(0, 0, 0, 0.5);
+	.blur {
+		background: url($assetDir + 'slide-03.jpg') center center no-repeat;
+		background-size: cover;
+		box-shadow: inset 9999px 9999px rgba(0, 0, 0, 0.6);
+		position: absolute;
+		left: 0;	
+		top: 0;
+		width: 100%;
+		height: 100%;
+		filter: blur(3px);
+	}
 	.text {
-		left: 50%;
-		transform: translate(-50%,-50%);
+		position: relative;
+		left: auto;
+		top: auto;
+		transform: none;
 		text-align: center;
 		width: 100%;
 		color: #fff;
 		text-shadow: 0 3px 20px #000;
+	
 		h1 {
 			text-transform: uppercase;
 			margin: 0 0 10px 0;
 			line-height: 1;
 		}
 		h2 {
+			font-family: $openSans;
 			font-weight: normal;
 			margin: 0;
 			line-height: 1;
+			font-size: 1.6em;
+			letter-spacing: 2px;
 		}
 	}
 
     img{
         width: 100%;
-        height: auto;
+        height: auto; 
         display: block;
     }
 
     //.text params are in ../prefab/style-prefabs
 }
+
 
 .button{
     @include buttonHover;

@@ -9,10 +9,12 @@
 	@include floatingHeader;
 	display: flex;
 	align-items: center;
+	padding: 20px 10px;
 
 	.site-branding {
 		width: 20%;
 		margin-right: auto;
+		max-width: 256px;
 	}
 }
 
